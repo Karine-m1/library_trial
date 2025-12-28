@@ -1,0 +1,472 @@
+@keyframes autoOpen {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+  
+  .book-list {
+    min-height: 100px;
+    width: 100%;
+    /* margin-left: 125px;  */
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    justify-items:center;
+    align-content: space-between;
+  }
+  
+  .favorites-container {
+    padding-top: 70px;
+  }
+  
+  .favorites {
+    min-height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  
+  .list_img {
+    height: 400px;
+    width: 300px;
+    transition: all 0.3s ease;
+  }
+
+  
+  .book {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    justify-content: center;
+    margin: 30px 0px;
+    height: 490px;
+    /* border-color: transparent; */
+    /* border: solid 0.4rem transparent; */
+    background-color: #7C5C50;
+  }
+  
+  .book img{
+    width: 180px;
+    height: 230px;
+  }
+  
+  .book h4{
+    color:black;
+    margin: 15px;
+  }
+
+  .borders{
+    border: #333;
+    border-radius: 2px;
+  }
+
+  .button-fav {
+    padding: 10px;
+    background-color: #903F11;
+    color: white;
+    width: 300px;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-right: 10px; /* Adjust the margin based on your design */
+  }
+  
+  /* Add this to your CSS or stylesheet */
+  .back-arrow {
+    font-size: 20px; /* Adjust this value to increase or decrease the size */
+    padding: 5px; /* Optional: Add padding for better appearance */
+    text-decoration: none;
+    color: #7C5C50; /* Optional: Customize the color */
+    transition: font-size 0.3s ease; /* Optional: Add transition effect */
+  }
+  
+  .back-arrow:hover {
+    font-size: 28px; /* Adjust size on hover if you want */
+  }
+  
+  
+  
+  h1 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .book-details {
+    position: relative;
+    flex-direction: row;
+    height: 400px;
+    width: 0px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px;
+    animation: autoOpen 2s ease forwards; /* Added animation for auto-opening */
+    
+    /* margin-bottom: 10rem; */
+    /* justify-content: center; */
+    
+  }
+  
+  .book-details > div {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .book-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book-description h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .book-description p {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .book-description h2,
+  .book-description p {
+    margin-top: 20px;
+  }
+  
+  .book-details h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    /* align-items: center; */
+  }
+  
+  @media (max-width: 768px) {
+    .book-details {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  
+  .book-description {
+    display: none;
+  }
+  
+  .book-details.open .book-description {
+    display: block;
+  }
+  
+  .book-details .book.clicked {
+    transform: rotateY(180deg);
+  }
+  
+  .bookCont {
+    position: relative;
+    width: 10rem;
+    height: 13.5rem;
+    margin: 2em auto;
+    overflow: visible;
+    cursor: pointer;
+    transition: all 0.5s linear;
+    left: 350px;
+    top: 50px;
+  
+    /* margin-bottom: 10rem; */
+    justify-content: center;
+    align-self: center;
+  }
+  
+  .cover, .page {
+    position: absolute;
+    width: 225px;
+    height: 350px;
+    left: 200px;
+    backface-visibility: hidden;
+    transform-origin: left center;
+    transition: inherit;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bookCont img {
+    width: 225px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cover {
+    z-index: 200;
+    transform: perspective(700px) rotateY(0deg);
+    background: #f0edf3 linear-gradient(90deg, transparent 3%, rgba(0, 0, 0, 0.1) 5%, transparent 6%);
+    
+    h1 {
+      font-size: 2.2em;
+      font-family: 'UnifrakturCook', cursive;
+      padding: 0.5em;
+      text-align: center;
+      color: #fff;
+    }
+  }
+  
+  .page {
+    padding: 1.1em;
+    font-family: 'PT Serif', serif;
+    font-size: 1.5em;
+    line-height: 0px;
+    color: #92684F;
+    border: none;
+    
+    &:before {
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      transition: inherit;
+    }
+    
+    &:after {
+      content: '';
+      width: 100%;
+      height: 0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: 50%;
+      border: solid 0px transparent;
+      border-top-color: rgba(0, 0, 0, 0.2);
+      transition: inherit;
+      box-shadow: 0px -13.5rem 0px 0px #fff;
+    }
+    
+    &:nth-child(2) {
+      transform: perspective(700px) rotateY(180deg) translateX(-100%);
+      background: #fff linear-gradient(90deg, rgba(0, 0, 0, 0) 97%, rgba(0, 0, 0, 0.1) 100%);
+      box-shadow: -1px 1px 2px 0px rgba(0, 0, 0, 0.2);
+      
+      &:before {
+        left: 0;
+      }
+      
+      &:after {
+        left: 1px;
+      }
+    }
+    
+    &:nth-child(3) {
+      background: #fff linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 3%);
+      border-left: solid 1px rgba(0, 0, 0, 0.2);
+      
+      &:before {
+        right: 0;
+      }
+      
+      &:after {
+        left: -1px;
+      }
+    }
+    
+    h2 {
+      margin: 0 0 0.6em 0;
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 60px;
+      line-height: 1em;
+      text-align: center;
+      
+      &+p:first-letter {
+        font-family: 'UnifrakturCook', cursive;
+        font-size: 2.2em;
+        line-height: 0em;
+        color: #92684F;
+        padding: 5px 2px 0 0;
+        float: left;
+      }
+    }
+    
+    p {  
+      text-align: justify;
+      margin: 0 0 0.5em;
+      color: #92684F;
+    }
+    
+    img {
+      width: 50%;
+      float: right;
+      padding: 0 0 0px 4px;
+      margin-bottom: 5rem;
+      justify-content: center;
+    }
+  }
+  
+  .open {
+    transform: translateX(50%);
+    animation: autoOpen 2s ease forwards; /* Added animation for auto-opening */
+    
+    .cover {
+      transform: perspective(700px) rotateY(-180deg);
+    }
+    
+    .page {
+      &:nth-child(2) {
+        z-index: 200;
+        transform: perspective(700px) rotateY(0deg) translateX(-100%);
+      }
+      
+      &:before {
+        width: 3px;
+      }
+      
+      &:after {
+        border-width: 3px;
+        bottom: -3px;
+      }
+    }
+  }
+  
+  /* body { 
+    background-color: #939393; 
+  } */
+  
+  *, *:before, *:after { 
+    box-sizing: border-box; 
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 700px; /* Adjust the margin based on your design */
+    margin-left: 460px;
+    width: 400px;
+  }
+  
+  .searchbar-form {
+    /* margin-top: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-left: 9rem;
+    width:800px;
+    height: 40px;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  
+  .searchbar-form input {
+    margin-right: 10px;
+    padding: 1.5rem; /* Adjust padding to control the height of the input */
+    width: 9000px; /* Set the desired width of the input */
+    font-size: 14px; /* Set the font size */
+    height: 40px;
+  }
+  
+  .search-form button {
+    padding: 1rem 1rem; /* Adjust padding to control the size of the button */
+    font-size: 14px; /* Set the font size */
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 1rem;
+    border: solid 0.1rem;
+  }
+  .SELECT_SEARCH{
+    padding: 1rem 1rem; /* Adjust padding to control the size of the button */
+    font-size: 14px; /* Set the font size */
+    width: 300px;
+    height: 50px;
+    justify-content: center;
+    align-content: center;
+    margin-left: 1rem;
+    border: solid 0.1rem;
+  
+  }
+    .text-book{
+      margin-top: 15rem;
+      border-radius: 1rem;
+      border: solid #92684F;
+      width: 30rem;
+      text-align: center;
+      color: rgb(185, 95, 95);
+    }
+  
+    .btn-primary {
+      /* padding: 10px 20px; */
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: white;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    
+    .btn-primary:hover {
+      /* background-color: rgb(215,190,171); */
+      color: #903F11;
+    }
+
+
+
+
+
+
+/* Table styles */
+.base_list {
+  margin: 20px;
+}
+
+.book-base-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-base-list th,
+.book-base-list td {
+  border: 1px solid #dddddd;
+  padding: 8px;
+  text-align: left;
+}
+
+/* Header styles */
+.book-base-list th {
+  background-color: #f2f2f2;
+}
+
+/* Alternate row color */
+.book-base-list tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.book-base-list tbody tr:hover {
+  background-color: #ddd;
+}
+
+.box {
+  width: 100px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 38px;
+  margin-left: 38px;
+}
+
+.reserved-box {
+  padding-left: 5px;
+  margin-left: 81px;
+  color: black; /* Yellow background for reserved */
+}
+
+.borrowed-box {
+  margin-left: 65px;
+  color: black; /* Red background for borrowed */
+  padding-left: 5px;
+}

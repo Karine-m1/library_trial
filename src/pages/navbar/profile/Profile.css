@@ -1,0 +1,79 @@
+.container.mt-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 130vh; */
+  /* width: 100%; */
+  padding-right: 20em;
+  padding-left: 10em;
+background-color: #F6EEE2;
+}
+.container.mt-4 h1{
+  /* padding-top: 1.5rem; */
+  /* padding-right: 50rem; */
+  align-self: center;
+  justify-self: center;
+  text-decoration: underline;
+  /* color: #903F11; */
+  /* padding-left: 25rem; */
+  text-shadow: -1.2px -1.2px 0 #7C5C50, 1.2px -1.2px 0 #7C5C50, -1.2px 1.2px 0 #7C5C50, 1.2px 1.2px 0 #7C5C50;
+
+}
+
+.card {
+  /* width: 80%; */
+  /* padding: 20px; */
+  /* box-sizing: border-box; */
+  
+}
+
+.basicc-form{
+  /* width: fit-content; */
+  /* height: 500rem; */
+  
+  background-color: white;
+
+  display: block;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 2pc #7C5C50;
+    margin: 40px 300px;
+    margin-bottom: 15rem;
+    margin-left: 200px;
+    max-width: 500em;
+    width: 60em;
+    max-height: 100%;
+    padding: 20px 100px;
+    align-items: center;
+    justify-content: center;
+    /* padding-bottom: 5rem; */
+}
+.btn.btn-primary.mt-4 {
+  display: block;
+  width: 30%; /* Adjusted width to 100% */
+  margin-top: 18px; /* Adjusted margin to create space between the form and the button */
+  /* margin-left: 155px; */
+  /* padding: 10px; */
+  font-size: 18px;
+  /* background-color: #007bff;
+  color: #fff; */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  height: fit-content;
+  width: fit-content;
+  align-items: center;
+  border: none;
+  background-color: #7C5C50;
+  color: #fff;
+}
+
+.btn.btn-primary.mt-4:hover {
+  background-color: #7C5C50;
+}
+
+.container {
+  /* background-color: white; */
+  
+/* background-color: #F6EEE2; */
+}

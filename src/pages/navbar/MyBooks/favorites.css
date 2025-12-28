@@ -1,0 +1,80 @@
+.favorites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  /* .book {
+    border: 1px solid #ccc; 
+    max-width: 300px; 
+    margin: auto; 
+    text-align: center;
+  }
+  
+  .book img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+  } */
+  
+  .bookR {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    justify-content: center;
+    margin: 30px 0px;
+    /* border-color: transparent; */
+    border: solid 0.4rem transparent;
+    background-color: #7C5C50;
+  }
+  
+  .bookR img{
+    width: 200px;
+    height: 250px;
+  }
+
+  .book-info {
+    padding: 10px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 180px;
+  }
+
+  .button-container button-fav{
+    width: 100px;
+    background-color: #7C5C50;
+  }
+
+  .button-borrow{
+    background-color: #904011;
+    color: rgba(255, 255, 255, 0.916);
+  }
+  
+  .book-container {
+    border: 1px solid transparent; /* Add border for each book */
+    max-width: 300px; /* Limit the maximum width of each book */
+    margin: auto; /* Center the book containers */
+  }
+  
+  /* Media query for responsive layout */
+  @media (max-width: 768px) {
+    .favorites {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column size for smaller screens */
+      grid-gap: 10px; /* Reduce the gap between books */
+    }
+  }
+  
+  .nobookk{
+    /* margin-left: 40rem; */
+    margin-top: 5rem;
+    /* margin-left: 30rem; */
+    width:600px;
+    margin-left: 30rem;
+  }

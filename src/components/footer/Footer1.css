@@ -1,0 +1,67 @@
+.footer {
+  position: fixed;
+  left: 0;
+  height: 100px;
+  bottom: -100%; /* Change the initial position to hide the footer completely */
+  width: 100%;
+  background-color: white;
+  color: rgb(148, 104, 37);
+  text-align: center;
+  transition: bottom 0.3s ease; /* Smooth transition */
+  justify-content: space-between;
+  align-items: center;
+  min-height: 50px; /* Set a minimum height for the footer */
+  z-index: 999; /* Ensure the footer stays on top */
+  border: solid 0.1em;
+}
+
+.footer.show {
+  bottom: 0;
+}
+
+.footer-rights p {
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(148, 104, 37);
+  font-weight: 600;
+  padding: 10px 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0px 10px;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin-right: 20px; /* Decreased margin */
+}
+
+.footer-item img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px; /* Decreased margin */
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    font-size: 13px; /* Decreased font size */
+    min-height: auto; /* Adjusted minimum height */
+  }
+
+  .footer-container {
+    padding: 5px 10px; /* Adjusted padding for smaller screens */
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .footer {
+    font-size: 11px; /* Further decreased font size */
+  }
+}

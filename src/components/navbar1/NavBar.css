@@ -1,0 +1,94 @@
+.navbar-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto; /* Change height to auto for responsiveness */
+  padding: 0 20px;
+  flex-direction: row;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 0.2rem solid rgb(215, 190, 171);
+  border-top: 0.2rem solid rgb(215, 190, 171);
+}
+
+.text-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.2em;
+}
+
+.home-image-nav {
+  width: 4em;
+  height: 4em;
+}
+
+.mainNav {
+  justify-content: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.endNav {
+  align-self: flex-end;
+  justify-self: flex-end;
+  padding-bottom: 1rem;
+}
+
+.endNav:hover {
+  color: #7C5C50;
+}
+
+.nav-linkk {
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+  transition: color 0.3s;
+  padding: 10px;
+  font-size: larger;
+}
+
+.nav-linkk:hover {
+  color: #7c5c50;
+}
+
+.nav-linkk.active {
+  color: #7c5c50;
+}
+
+.log-in-btn,
+.log-out-btn {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.log-in-btn:hover,
+.log-out-btn:hover {
+  color: #7C5C50;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    justify-content: space-around;
+    height: auto;
+  }
+
+  .text-nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-linkk {
+    margin: 10px 0;
+  }
+
+  .endNav {
+    margin-top: 10px;
+  }
+}
